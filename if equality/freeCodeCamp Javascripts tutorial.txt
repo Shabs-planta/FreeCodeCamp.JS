@@ -1,0 +1,585 @@
+>>>     JAVASCRIPT ONLINE CLASS      <<<
+
+
+- Comparison with the Equality Operator: 
+
+- () : it called reference or parentheses, But whats inside is a parameter.
+- syntax : is a way you present a code, maybe Functions
+- concat() : is uses in adding to arrays together in providing a single Array.
+
+- Comparison with the Strict Equality Operator: 
+Strict equality (===) is the counterpart to the equality operator (==). However, unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
+
+If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
+
+- Comparison with the Greater Than Operator:  
+The greater than operator (>) compares the values of two numbers. If the number to the left is greater than the number to the right, it returns true. Otherwise, it returns false.
+
+Like the equality operator, the greater than operator will convert data types of values while comparing.
+
+- Comparison with the Greater Than Or Equal To Operator: 
+The greater than or equal to operator (>=) compares the values of two numbers. If the number to the left is greater than or equal to the number to the right, it returns true. Otherwise, it returns false.
+
+Like the equality operator, the greater than or equal to operator will convert data types while comparing.
+
+- Comparison with the Less Than Operator:
+The less than operator (<) compares the values of two numbers. If the number to the left is less than the number to the right, it returns true. Otherwise, it returns false. Like the equality operator, the less than operator converts data types while comparing.
+
+- Comparisons with the Logical "AND" Operator:
+Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+
+The same effect could be achieved by nesting an if statement inside another if:
+
+- Comparisons with the Logical "OR" Operator:
+The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false.
+
+The logical or operator is composed of two pipe symbols: (||). This can typically be found between your Backspace and Enter keys.
+
+- Introducing "Else" Statements:
+When a condition for an if statement is true, the block of code following it is executed. What about when that condition is false? Normally nothing would happen. With an else statement, an alternate block of code can be executed.
+
+- Introducing "Else If" Statements:
+If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
+
+<Question>
+- Golf Code:
+In the game of Golf, each hole has a par, meaning, the average number of strokes a golfer is expected to make in order to sink the ball in the hole to complete the play. Depending on how far above or below par your strokes are, there is a different nickname.
+
+Your function will be passed par and strokes arguments. Return the correct string according to this table which lists the strokes in order of priority; top (highest) to bottom (lowest):
+
+Strokes	Return
+1	"Hole-in-one!"
+<= par - 2	"Eagle"
+par - 1	"Birdie"
+par	"Par"
+par + 1	"Bogey"
+par + 2	"Double Bogey"
+>= par + 3	"Go Home!"
+par and strokes will always be numeric and positive. We have added an array of all the names for your convenience.
+
+- Selecting from Many Options with Switch Statements:
+If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered.
+
+Here is an example of a switch statement:
+
+<Question>
+Write a switch statement which tests val and sets answer for the following conditions:
+1 - alpha
+2 - beta
+3 - gamma
+4 - delta
+
+- Adding a Default Option in Switch Statements:
+In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
+
+A default statement should be the last case.
+
+<Question>
+Write a switch statement to set answer for the following conditions:
+a - apple
+b - bird
+c - cat
+default - stuff
+
+- Multiple Identical Options in Switch Statements
+If the break statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. If you have multiple inputs with the same output, you can represent them in a switch statement like this:
+
+<Question>
+Write a switch statement to set answer for the following ranges:
+1-3 - Low
+4-6 - Mid
+7-9 - High
+
+Note: You will need to have a case statement for each number in the range.
+
+- Return Early Pattern for Functions
+When a return statement is reached, the execution of the current function stops and control returns to the calling location.
+
+<Question>
+- Counting Cards
+In the casino game Blackjack, a player can determine whether they have an advantage on the next hand over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called Card Counting.
+
+Having more high cards remaining in the deck favors the player. Each card is assigned a value according to the table below. When the count is positive, the player should bet high. When the count is zero or negative, the player should bet low.
+
+Count Change	Cards
++1	2, 3, 4, 5, 6
+0	7, 8, 9
+-1	10, 'J', 'Q', 'K', 'A'
+You will write a card counting function. It will receive a card parameter, which can be a number or a string, and increment or decrement the global count variable according to the card's value (see table). The function will then return a string with the current count and the string Bet if the count is positive, or Hold if the count is zero or negative. The current count and the player's decision (Bet or Hold) should be separated by a single space.
+
+Example Outputs: -3 Hold or 5 Bet
+
+Hint
+Do NOT reset count to 0 when value is 7, 8, or 9.
+Do NOT return an array.
+Do NOT include quotes (single or double) in the output.
+
+- Build JavaScript Objects
+You may have heard the term object before.
+
+Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.
+
+Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+
+- Ways to access Objects properties:
+1. Dot Notation
+2. Bracket Notation
+3. variable Declearation
+
+
+- Using Objects for Lookups
+Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
+
+<Question>
+Convert the switch statement into an object called lookup. Use it to look up val and assign the associated string to the result variable.
+
+- Testing Objects for Properties
+Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
+
+<Question>
+Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found".
+
+- Record Collection:
+You are given an object literal representing a part of your musical album collection. Each album has a unique id number as its key and several other properties. Not all albums have complete information.
+
+You start with an updateRecords function that takes an object literal, records, containing the musical album collection, an id, a prop (like artist or tracks), and a value. Complete the function using the rules below to modify the object passed to the function.
+
+<Question given>
+Your function must always return the entire record collection object.
+If prop isn't tracks and value isn't an empty string, update or set that album's prop to value.
+If prop is tracks but the album doesn't have a tracks property, create an empty array and add value to it.
+If prop is tracks and value isn't an empty string, add value to the end of the album's existing tracks array.
+If value is an empty string, delete the given prop property from the album.
+
+
+- Iterate with JavaScript While Loops:
+You can run the same code multiple times by using a loop.
+
+The first type of loop we will learn is called a while loop because it runs while a specified condition is true and stops once that condition is no longer true.
+
+- Iterate with JavaScript For Loops:
+You can run the same code multiple times by using a loop.
+
+The most common type of JavaScript loop is called a for loop because it runs for a specific number of times.
+
+For loops are declared with three optional expressions separated by semicolons:
+
+for (a; b; c), where a is the initialization statement, b is the condition statement, and c is the final expression.
+
+The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.
+
+The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When the condition is false at the start of the iteration, the loop will stop executing. This means if the condition starts as false, your loop will never execute.
+
+The final expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter.
+
+- Count Backwards With a For Loop:
+A for loop can also count backwards, so long as we can define the right conditions.
+
+In order to decrement by two each iteration, we'll need to change our initialization, condition, and final expression.
+
+- Nesting For Loops:
+If you have a multi-dimensional array, you can use the same logic as the prior waypoint to loop through both the array and any sub-arrays.
+
+- Iterate with JavaScript Do...While Loops:
+The next type of loop you will learn is called a do...while loop. It is called a do...while loop because it will first do one pass of the code inside the loop no matter what, and then continue to run the loop while the specified condition evaluates to true.
+
+<Your code should not rely on any kind of loops (for or while or higher order functions such as forEach, map, filter, or reduce.).>
+
+- Replace Loops using Recursion:
+Recursion is the concept that a function can be expressed in terms of itself. To help understand this, start by thinking about the following task: multiply the first n elements of an array to create the product of those elements. Using a for loop, you could do this:
+
+- <Question>
+- Profile Lookup
+We have an array of objects representing different people in our contacts lists.
+
+A lookUpProfile function that takes name and a property (prop) as arguments has been pre-written for you.
+
+The function should check if name is an actual contact's firstName and the given property (prop) is a property of that contact.
+
+If both are true, then return the "value" of that property.
+
+If name does not correspond to any contacts then return the string No such contact.
+
+If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
+
+- Generate Random Fractions with JavaScript:
+Random numbers are useful for creating random behavior.
+
+JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). Thus Math.random() can return a 0 but never return a 1.
+
+Note: Like Storing Values with the Assignment Operator, all function calls will be resolved before the return executes, so we can return the value of the Math.random() function.
+
+- Generate Random Whole Numbers with JavaScript:
+It's great that we can generate random decimal numbers, but it's even more useful if we use it to generate random whole numbers.
+
+Use Math.random() to generate a random decimal.
+Multiply that random decimal by 20.
+Use another function, Math.floor() to round the number down to its nearest whole number.
+Remember that Math.random() can never quite return a 1 and, because we're rounding down, it's impossible to actually get 20. This technique will give us a whole number between 0 and 19.
+
+Math.floor() - round the value of Math.random() to the nearest own "Number"
+
+- Generate Random Whole Numbers within a Range
+Instead of generating a random whole number between zero and a given number like we did before, we can generate a random whole number that falls within a range of two specific numbers.
+
+To do this, we'll define a minimum number min and a maximum number max.
+
+Here's the formula we'll use. Take a moment to read it and try to understand what this code is doing:
+
+Math.floor(Math.random() * (max - min + 1)) + min
+
+- Generate Random Whole Numbers within a Range:
+Instead of generating a random whole number between zero and a given number like we did before, we can generate a random whole number that falls within a range of two specific numbers.
+
+To do this, we'll define a minimum number min and a maximum number max.
+
+Here's the formula we'll use. Take a moment to read it and try to understand what this code is doing:
+
+Math.floor(Math.random() * (max - min + 1)) + min
+
+- Use the parseInt Function:
+The parseInt() function parses a string and returns an integer. Here's an example:
+
+<const a = parseInt("007");>
+The above function converts the string 007 to the integer 7. If the first character in the string can't be converted into a number, then it returns NaN.
+
+- Use the parseInt Function with a Radix:
+The parseInt() function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+
+The function call looks like:
+
+<a parseInt(string, radix); >
+And here's an example:
+
+<const a = parseInt("11", 2);>
+The radix variable says that 11 is in the binary system, or base 2. This example converts the string 11 to an integer 3.
+
+- Use the Conditional (Ternary) Operator:
+The conditional operator, also called the ternary operator, can be used as a one line if-else expression.
+
+The syntax is a ? b : c, where a is the condition, b is the code to run when the condition returns true, and c is the code to run when the condition returns false.
+
+- Use Multiple Conditional (Ternary) Operators:
+In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.
+
+The following function uses if, else if, and else statements to check multiple conditions:
+
+- Use Recursion to Create a Countdown:
+In a previous challenge, you learned how to use recursion to replace a for loop. Now, let's look at a more complex function that returns an array of consecutive integers starting with 1 through the number passed to the function.
+
+As mentioned in the previous challenge, there will be a base case. The base case tells the recursive function when it no longer needs to call itself. It is a simple case where the return value is already known. There will also be a recursive call which executes the original function with different arguments. If the function is written correctly, eventually the base case will be reached.
+
+For example, say you want to write a recursive function that returns an array containing the numbers 1 through n. This function will need to accept an argument, n, representing the final number. Then it will need to call itself with progressively smaller values of n until it reaches 1. You could write the function as follows:
+
+- Use Recursion to Create a Range of Numbers:
+Continuing from the previous challenge, we provide you another opportunity to create a recursive function to solve a problem.
+
+<Question>
+We have defined a function named rangeOfNumbers with two parameters. The function should return an array of integers which begins with a number represented by the startNum parameter and ends with a number represented by the endNum parameter. The starting number will always be less than or equal to the ending number. Your function must use recursion by calling itself and not use loops of any kind. It should also work for cases where both startNum and endNum are the same.
+
+
+
+
+
+
+
+
+// ES6  JavaScript 2015
+// ES6 ECMAscript or ES6, was released in 2015
+
+- Compare Scopes of the var and let Keywords:
+If you are unfamiliar with let, check out this challenge about the difference between let and var.
+
+When you declare a variable with the var keyword, it is declared globally, or locally if declared inside a function.
+
+The let keyword behaves similarly, but with some extra features. When you declare a variable with the let keyword inside a block, statement, or expression, its scope is limited to that block, statement, or expression.
+
+- JavaScript Algorithms and Data Structures
+ES6
+Mutate an Array Declared with const
+If you are unfamiliar with const, check out this challenge about the const keyword.
+
+The const declaration has many use cases in modern JavaScript.
+
+Some developers prefer to assign all their variables using const by default, unless they know they will need to reassign the value. Only in that case, they use let.
+
+However, it is important to understand that objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier
+
+- Prevent Object Mutation:
+As seen in the previous challenge, const declaration alone doesn't really protect your data from mutation. To ensure your data doesn't change, JavaScript provides a function Object.freeze to prevent data mutation.
+
+Any attempt at changing the object will be rejected, with an error thrown if the script is running in strict mode.
+
+- Use Arrow Functions to Write Concise Anonymous Functions:
+In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.
+
+To achieve this, we often use the following syntax:
+
+- Write Arrow Functions with Parameters:
+Just like a regular function, you can pass arguments into an arrow function.
+
+- Set Default Parameters for Your Functions:
+In order to help us create more flexible functions, ES6 introduces default parameters for functions.
+The default parameter kicks in when the argument is not specified (it is undefined). As you can see in the example above, the parameter name will receive its default value Anonymous when you do not provide a value for the parameter. You can add default values for as many parameters as you want.
+
+- Use the Rest Parameter with Function Parameters
+In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+
+Check out this code:
+
+function howMany(...args) {
+  return "You have passed " + args.length + " arguments.";
+}
+console.log(howMany(0, 1, 2));
+console.log(howMany("string", null, [1, 2, 3], { }));
+The console would display the strings You have passed 3 arguments. and You have passed 4 arguments..
+
+The rest parameter eliminates the need to check the args array and allows us to apply map(), filter() and reduce() on the parameters array.
+<Question>
+Modify the function sum using the rest parameter in such a way that the function sum is able to take any number of arguments and return their sum.
+
+- Use the Spread Operator to Evaluate Arrays In-Place:
+ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
+
+- Use Destructuring Assignment to Extract Values from Objects:
+Destructuring assignment is special syntax introduced in ES6, for neatly assigning values taken directly from an object.
+
+- Use Destructuring Assignment to Assign Variables from Objects:
+Destructuring allows you to assign a new variable name when extracting values. You can do this by putting the new name after a colon when assigning the value.
+
+Using the same object from the last example:
+
+- Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements:
+In some situations involving array destructuring, we might want to collect the rest of the elements into a separate array.
+
+- Create Strings using Template Literals:
+A new feature of ES6 is the template literal. This is a special type of string that makes creating complex strings easier.
+
+Template literals allow you to create multi-line strings and to use string interpolation features to create strings.
+
+- Use getters and setters to Control Access to an Object:
+You can obtain values from an object and set the value of a property within an object.
+
+These are classically called getters and setters.
+
+Getter functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.
+
+Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.
+
+<Question>
+Use the class keyword to create a Thermostat class. The constructor accepts a Fahrenheit temperature.
+
+In the class, create a getter to obtain the temperature in Celsius and a setter to set the temperature in Celsius.
+
+Remember that C = 5/9 * (F - 32) and F = C * 9.0 / 5 + 32, where F is the value of temperature in Fahrenheit, and C is the value of the same temperature in Celsius.
+
+Note: When you implement this, you will track the temperature inside the class in one scale, either Fahrenheit or Celsius.
+
+This is the power of a getter and a setter. You are creating an API for another user, who can get the correct result regardless of which one you track.
+
+In other words, you are abstracting implementation details from the user.
+
+- Create a Module Script:
+JavaScript started with a small role to play on an otherwise mostly HTML web. Today, it’s huge, and some websites are built almost entirely with JavaScript. In order to make JavaScript more modular, clean, and maintainable; ES6 introduced a way to easily share code among JavaScript files. This involves exporting parts of a file for use in one or more other files, and importing the parts you need, where you need them. In order to take advantage of this functionality, you need to create a script in your HTML document with a type of module.
+
+- Use export to Share a Code Block:
+Imagine a file called math_functions.js that contains several functions related to mathematical operations. One of them is stored in a variable, add, that takes in two numbers and returns their sum. You want to use this function in several different JavaScript files. In order to share it with these other files, you first need to export it.
+
+- Reuse JavaScript Code Using import:
+import allows you to choose which parts of a file or module to load. In the previous lesson, the examples exported add from the math_functions.js file. Here's how you can import it to use in another file:
+
+<import { add } from './math_functions.js'>;
+Here, import will find add in math_functions.js, import just that function for you to use, and ignore the rest. The ./ tells the import to look for the math_functions.js file in the same folder as the current file. The relative file path (./) and file extension (.js) are required when using import in this way.
+
+You can import more than one item from the file by adding them in the import
+
+- Use * to Import Everything from a File:
+Suppose you have a file and you wish to import all of its contents into the current file. This can be done with the import * as syntax. Here's an example where the contents of a file named math_functions.js are imported into a file in the same directory:
+
+<import * as myMathModule from "./math_functions.js">;
+The above import statement will create an object called myMathModule. This is just a variable name, you can name it anything. The object will contain all of the exports from math_functions.js in it, so you can access the functions like you would any other object property.
+
+- Create a JavaScript Promise:
+A promise in JavaScript is exactly what it sounds like - you use it to make a promise to do something, usually asynchronously. When the task completes, you either fulfill your promise or fail to do so. Promise is a constructor function, so you need to use the new keyword to create one. It takes a function, as its argument, with two parameters - resolve and reject. These are methods used to determine the outcome of the promise.
+
+A promise has three states: pending, fulfilled, and rejected. The promise you created in the last challenge is forever stuck in the pending state because you did not add a way to complete the promise. The resolve and reject parameters given to the promise argument are used to do this. resolve is used when you want your promise to succeed, and reject is used when you want it to fail. These are methods that take an argument, as seen below.
+
+- Handle a Fulfilled Promise with then:
+Promises are most useful when you have a process that takes an unknown amount of time in your code (i.e. something asynchronous), often a server request. When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server. This can be achieved by using the then method. The then method is executed immediately after your promise is fulfilled with resolve. Here’s an example:
+
+- Handle a Rejected Promise with catch:
+catch is the method used when your promise has been rejected. It is executed immediately after a promise's reject method is called. 
+error is the argument passed in to the reject method.
+
+
+
+
+
+
+// Regular Expressions
+- Using the Test Method:
+Regular expressions are used in programming languages to match parts of strings. You create patterns to help you do that matching.
+
+If you want to find the word the in the string The dog chased the cat, you could use the following regular expression: /the/. Notice that quote marks are not required within the regular expression.
+
+JavaScript has multiple ways to use regexes. One way to test a regex is using the .test() method. The .test() method takes the regex, applies it to a string (which is placed inside the parentheses), and returns true or false if your pattern finds something or not.
+
+- Match a Literal String with Different Possibilities:
+Using regexes like /coding/, you can look for the pattern coding in another string.
+
+This is powerful to search single strings, but it's limited to only one pattern. You can search for multiple patterns using the alternation or OR operator: |.
+
+This operator matches patterns either before or after it. For example, if you wanted to match the strings yes or no, the regex you want is /yes|no/.
+
+You can also search for more than just two patterns. You can do this by adding more patterns with more OR operators separating them, like /yes|no|maybe/.
+
+- Ignore Case While Matching:
+Up until now, you've looked at regexes to do literal matches of strings. But sometimes, you might want to also match case differences.
+
+Case (or sometimes letter case) is the difference between uppercase letters and lowercase letters. Examples of uppercase are A, B, and C. Examples of lowercase are a, b, and c.
+
+You can match both cases using what is called a flag. There are other flags but here you'll focus on the flag that ignores case - the i flag. You can use it by appending it to the regex. An example of using this flag is /ignorecase/i. This regex can match the strings ignorecase, igNoreCase, and IgnoreCase.
+
+- Match Anything with Wildcard Period
+Sometimes you won't (or don't need to) know the exact characters in your patterns. Thinking of all words that match, say, a misspelling would take a long time. Luckily, you can save time using the wildcard character: .
+
+The wildcard character . will match any one character. The wildcard is also called dot and period. You can use the wildcard character just like any other character in the regex. For example, if you wanted to match hug, huh, hut, and hum, you can use the regex /hu./ to match all four words.
+
+- Match Single Character with Multiple Possibilities:
+You learned how to match literal patterns (/literal/) and wildcard character (/./). Those are the extremes of regular expressions, where one finds exact matches and the other matches everything. There are options that are a balance between the two extremes.
+
+You can search for a literal pattern with some flexibility with character classes. Character classes allow you to define a group of characters you wish to match by placing them inside square ([ and ]) brackets.
+
+For example, you want to match bag, big, and bug but not bog. You can create the regex /b[aiu]g/ to do this. The [aiu] is the character class that will only match the characters a, i, or u.
+
+- Match Letters of the Alphabet:
+You saw how you can use character sets to specify a group of characters to match, but that's a lot of typing when you need to match a large range of characters (for example, every letter in the alphabet). Fortunately, there is a built-in feature that makes this short and simple.
+
+Inside a character set, you can define a range of characters to match using a hyphen character: -.
+
+For example, to match lowercase letters a through e you would use [a-e].
+
+- Match Numbers and Letters of the Alphabet:
+Using the hyphen (-) to match a range of characters is not limited to letters. It also works to match a range of numbers.
+
+For example, /[0-5]/ matches any number between 0 and 5, including the 0 and 5.
+
+Also, it is possible to combine a range of letters and numbers in a single character set.
+
+- Match Single Characters Not Specified:
+So far, you have created a set of characters that you want to match, but you could also create a set of characters that you do not want to match. These types of character sets are called negated character sets.
+
+To create a negated character set, you place a caret character (^) after the opening bracket and before the characters you do not want to match.
+
+For example, /[^aeiou]/gi matches all characters that are not a vowel. Note that characters like ., !, [, @, / and white space are matched - the negated vowel character set only excludes the vowel characters.
+
+- Match Characters that Occur One or More Times
+Sometimes, you need to match a character (or group of characters) that appears one or more times in a row. This means it occurs at least once, and may be repeated.
+
+You can use the + character to check if that is the case. Remember, the character or pattern has to be present consecutively. That is, the character has to repeat one after the other.
+
+For example, /a+/g would find one match in abc and return ["a"]. Because of the +, it would also find a single match in aabc and return ["aa"].
+
+If it were instead checking the string abab, it would find two matches and return ["a", "a"] because the a characters are not in a row - there is a b between them. Finally, since there is no a in the string bcd, it wouldn't find a match.
+
+- Find Characters with Lazy Matching:
+In regular expressions, a greedy match finds the longest possible part of a string that fits the regex pattern and returns it as a match. The alternative is called a lazy match, which finds the smallest possible part of the string that satisfies the regex pattern.
+
+You can apply the regex /t[a-z]*i/ to the string "titanic". This regex is basically a pattern that starts with t, ends with i, and has some letters in between.
+
+Regular expressions are by default greedy, so the match would return ["titani"]. It finds the largest sub-string possible to fit the pattern.
+
+However, you can use the ? character to change it to lazy matching. "titanic" matched against the adjusted regex of /t[a-z]*?i/ returns ["ti"].
+
+Note: Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
+<Question>
+Fix the regex /<.*>/ to return the HTML tag <h1> and not the text "<h1>Winter is coming</h1>". Remember the wildcard . in a regular expression matches any character.
+
+- Match Beginning String Patterns:
+Prior challenges showed that regular expressions can be used to look for a number of matches. They are also used to search for patterns in specific positions in strings.
+
+In an earlier challenge, you used the caret character (^) inside a character set to create a negated character set in the form [^thingsThatWillNotBeMatched]. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+
+- Match Ending String Patterns:
+In the last challenge, you learned to use the caret character to search for patterns at the beginning of strings. There is also a way to search for patterns at the end of strings.
+
+You can search the end of strings using the dollar sign character $ at the end of the regex.
+
+- Match All Letters and Numbers:
+Using character classes, you were able to search for all letters of the alphabet with [a-z]. This kind of character class is common enough that there is a shortcut for it, although it includes a few extra characters as well.
+
+The closest character class in JavaScript to match the alphabet is \w. This shortcut is equal to [A-Za-z0-9_]. This character class matches upper and lowercase letters plus numbers. Note, this character class also includes the underscore character (_).
+
+- Match Everything But Letters and Numbers:
+You've learned that you can use a shortcut to match alphanumerics [A-Za-z0-9_] using \w. A natural pattern you might want to search for is the opposite of alphanumerics.
+
+You can search for the opposite of the \w with \W. Note, the opposite pattern uses a capital letter. This shortcut is the same as [^A-Za-z0-9_].
+
+- Restrict Possible Usernames:
+Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.
+
+You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.
+
+1. Usernames can only use alpha-numeric characters.
+
+2. The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+
+3. Username letters can be lowercase and uppercase.
+
+4. Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+
+- Match Whitespace:
+The challenges so far have covered matching letters of the alphabet and numbers. You can also match the whitespace or spaces between letters.
+
+You can search for whitespace using \s, which is a lowercase s. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters. You can think of it as similar to the character class [ \r\t\f\n\v].
+
+- Specify Upper and Lower Number of Matches:
+Recall that you use the plus sign + to look for one or more characters and the asterisk * to look for zero or more characters. These are convenient but sometimes you want to match a certain range of patterns.
+
+You can specify the lower and upper number of patterns with quantity specifiers. Quantity specifiers are used with curly brackets ({ and }). You put two numbers between the curly brackets - for the lower and upper number of patterns.
+
+For example, to match only the letter a appearing between 3 and 5 times in the string ah, your regex would be /a{3,5}h/.
+
+- Check for All or None:
+Sometimes the patterns you want to search for may have parts of it that may or may not exist. However, it may be important to check for them nonetheless.
+
+You can specify the possible existence of an element with a question mark, ?. This checks for zero or one of the preceding element. You can think of this symbol as saying the previous element is optional.
+
+For example, there are slight differences in American and British English and you can use the question mark to match both spellings.
+
+- Positive and Negative Lookahead
+Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. This can be useful when you want to search for multiple patterns over the same string.
+
+There are two kinds of lookaheads: positive lookahead and negative lookahead.
+
+A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it. A positive lookahead is used as (?=...) where the ... is the required part that is not matched.
+
+On the other hand, a negative lookahead will look to make sure the element in the search pattern is not there. A negative lookahead is used as (?!...) where the ... is the pattern that you do not want to be there. The rest of the pattern is returned if the negative lookahead part is not present.
+
+Lookaheads are a bit confusing but some examples will help.
+
+- Check For Mixed Grouping of Characters:
+Sometimes we want to check for groups of characters using a Regular Expression and to achieve that we use parentheses ().
+
+If you want to find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
+
+Then check whether the desired string groups are in the test string by using the test() method.
+
+- Reuse Patterns Using Capture Groups:
+Say you want to match a word that occurs multiple times like below.
+
+let repeatStr = "row row row your boat";
+You could use /row row row/, but what if you don't know the specific word repeated? Capture groups can be used to find repeated substrings.
+
+Capture groups are constructed by enclosing the regex pattern to be captured in parentheses. In this case, the goal is to capture a word consisting of alphanumeric characters so the capture group will be \w+ enclosed by parentheses: /(\w+)/.
+
+The substring matched by the group is saved to a temporary "variable", which can be accessed within the same regex using a backslash and the number of the capture group (e.g. \1). Capture groups are automatically numbered by the position of their opening parentheses (left to right), starting at 1.
+
+- Remove Whitespace from Start and End:
+Sometimes whitespace characters around strings are not wanted but are there. Typical processing of strings is to remove the whitespace at the start and end of it.
+
+Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
+
+Note: The String.prototype.trim() method would work here, but you'll need to complete this challenge using regular expressions.
+
+
